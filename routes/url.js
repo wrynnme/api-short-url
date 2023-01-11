@@ -10,10 +10,10 @@ const Url = require('../models/Url');
 // @desc      Create short URL
 router.post('/shorten', async (req, res) => {
 	const { longUrl } = req.body;
-	const baseUrl = config.get('baseUrl');
+	const baseURL = config.get('baseURL');
 
 	// Check base url
-	if (!validUrl.isUri(baseUrl)) {
+	if (!validUrl.isUri(baseURL)) {
 		return res.status(401).json('Invalid base url');
 	}
 
@@ -28,7 +28,7 @@ router.post('/shorten', async (req, res) => {
 			if (url) {
 				res.json(url);
 			} else {
-				const shortUrl = baseUrl + '/' + urlCode;
+				const shortUrl = baseURL + '/' + urlCode;
 
 				url = new Url({
 					longUrl,
