@@ -1,4 +1,4 @@
 {
 	"mongoURI": "mongodb+srv://wrynnme:c67zsFiZzF4KkMlW@cluster0.8p7kf8c.mongodb.net/?retryWrites=true&w=majority",
-	"baseUrl": "http://https://curious-klepon-e4d6e9.netlify.app"
+	"baseURL": "https://api-short-url.vercel.app"
 }
